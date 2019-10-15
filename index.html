@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>CAB 命令表</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="backGroundPanel">
+        <h1>CAB 命令表</h1>
+
+        <div class="dataPanel">
+            <table>
+                <tr>
+                    <th>番号</th>
+                    <th>命令</th>
+                    <th colspan="2">ボタン</th>
+                    <th>実行結果</th>
+                </tr>
+                <tr>
+                    <th><input type="radio" name="data" class="radioButton">&nbsp;1&nbsp;</th>
+                    <td id="cell0" onclick="deleteNum(0);"><span id="input0"></span></td>
+                    <td><button type="button" onclick="setValue(1);">1. 上下反転</button></td>
+                    <td><button type="button" onclick="setValue(6);">6. 前命令消</button></td>
+                    <td><span id="output0"></span></td>
+                </tr>
+                <tr>
+                    <th><input type="radio" name="data" class="radioButton">&nbsp;2&nbsp;</th>
+                    <td id="cell1" onclick="deleteNum(1);"><span id="input1"></span></td>
+                    <td><button type="button" onclick="setValue(2);">2. 左右反転</button></td>
+                    <td><button type="button" onclick="setValue(7);">7. 次命令消</button></td>
+                    <td><span id="output1"></span></td>
+                </tr>
+                <tr>
+                    <th><input type="radio" name="data" class="radioButton">&nbsp;3&nbsp;</th>
+                    <td id="cell2" onclick="deleteNum(2);"><span id="input2"></span></td>
+                    <td><button type="button" onclick="setValue(3);">3. 前の図消</button></td>
+                    <td><button type="button" onclick="setValue(8);">8. ４３２１</button></td>
+                    <td><span id="output2"></span></td>
+                </tr>
+                <tr>
+                    <th><input type="radio" name="data" class="radioButton">&nbsp;4&nbsp;</th>
+                    <td id="cell3" onclick="deleteNum(3);"><span id="input3"></span></td>
+                    <td><button type="button" onclick="setValue(4);">4. 次の図消</button></td>
+                    <td><button type="button" onclick="setValue(9);">9. ３４１２</button></td>
+                    <td><span id="output3"></span></td>
+                </tr>
+                <tr>
+                    <th>opt</th>
+                    <td id="cell4" onclick="deleteOpt(4);"><span id="input4"></span></td>
+                    <td><button type="button" onclick="setValue(5);">5. 前図交換</button></td>
+                    <td><button type="button" onclick="setValue(10);">10. ２１４３</button></td>
+                    <td><span id="output4"></span></td>
+                </tr>
+            </table>
+            <br />
+            <div class="exeList">
+                <button type="button" onclick="execute();">実行</button><button type="button"
+                    onclick="initData();">リセット</button>
+            </div>
+            <hr>
+        </div>
+
+        <div class="usage">
+            <h2>ボタンを押したときの動作</h2>
+            <ul>
+                <li>1～7のボタンを押した場合、命令項目のうち、緑色のセルに値が設定される。</li>
+                <li>8～10のボタンを押した場合、命令項目のうち、ピンク色のセルに値が設定される。</li>
+                <li>リセットのボタンを押した場合、ロード時の状態に戻る。</li>
+                <li>実行のボタンを押した場合、処理が行われ、実行結果項目に結果が表示される。図形が削除された場合、空欄となる。
+                    実行結果に表示される数字は、番号項目にある数字に対応する。</li>
+            </ul>
+
+            <h2>命令のセルをクリックしたときの動作</h2>
+            <p>命令項目のセルを選択すると、内容が消去され、選択したセルから再び入力できる。</p>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

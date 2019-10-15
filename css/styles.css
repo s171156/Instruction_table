@@ -1,0 +1,63 @@
+/* いい感じに描画領域を決める */
+.backGroundPanel {
+    width: 60%;
+    min-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* datapanel */
+
+ /* いい感じにデータパネルの設定をする */
+.dataPanel {
+    width: 100%;
+}
+
+/* いい感じにテーブルの設定する */
+.dataPanel table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.dataPanel table th,
+.dataPanel table td {
+    border: solid black 1px;
+}
+
+/* いい感じにボタンの大きさを決める */
+.dataPanel button {
+    width: 100%;
+    font-size: 110%;
+}
+
+/* ラジオボタンは表示しない */
+.radioButton {
+    display: none;
+}
+
+/* いい感じに配置 */
+.exeList {
+    width: 100%;
+}
+
+/* いい感じにボタンを配置する */
+.exeList button {
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.usage {
+    width: 100%;
+}
+
+.usage ul {
+    list-style-type: none;
+}
